@@ -1,0 +1,21 @@
+{
+  "name": "Calculadora-Windows",
+  "authors": [
+    "Kawan <kawan-silva@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "^5.13.0",
+    "bootstrap": "^4.5.0"
+  }
+}

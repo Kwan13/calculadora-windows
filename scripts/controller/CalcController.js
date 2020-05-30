@@ -47,6 +47,20 @@ class CalcController {
         this.setLastNumberToDisplay();
     }
 
+    addDot() {
+        let lastOperation = this.getLastOperation();
+
+        if (typeof lastOperation === 'string' && lastOperation.split('').indexOf('.') > -1) return;
+
+        if (this.isOperator(lastOperation) || !lastOperation) {
+            this.pushOperation('0.');
+        } else {
+            this.setLastOperation(lastOperation.toString() + '.');
+        }
+
+        this.setLastNumberToDisplay();
+    }
+
     execBtn(value) {
         switch (value) {
             case 'ce':
@@ -71,6 +85,7 @@ class CalcController {
                 this.addOperation('+');
                 break;
             case 'ponto':
+                this.addDot();
                 break;
             case 'audio':
                 break;
@@ -143,7 +158,7 @@ class CalcController {
     setLastNumberToDisplay() {
         let lastNumber = this.getLastItem(false);
 
-        if(!lastNumber) {
+        if (!lastNumber) {
             lastNumber = 0;
         }
 
@@ -157,14 +172,14 @@ class CalcController {
         if (this.operation.length < 3) {
             let first = this.operation[0];
             this.operation = [first, this.lastOperator, this.lastNumber]
-            
+
         }
 
         if (this.operation.length > 3) {
 
             last = this.operation.pop();
 
-            if(last === '%') {
+            if (last === '%') {
                 let result = this.getResult();
                 result /= 100
                 this.operation = [result]
@@ -214,7 +229,7 @@ class CalcController {
             } else {
 
                 let newValue = this.getLastOperation().toString() + value.toString();
-                this.setLastOperation(parseInt(newValue));
+                this.setLastOperation(newValue);
                 this.setLastNumberToDisplay();
 
             }

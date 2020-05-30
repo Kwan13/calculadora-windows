@@ -1,9 +1,12 @@
 class CalcController {
     constructor() {
+        this.audio = new Audio('click.mp3');
+        this.audioOnOff = false;
         this._displayCalc = document.querySelector('#display');
         this.operation = [];
         this.lastNumber;
         this.lastOperator;
+        this.initKeyBoard();
         this.initEvents();
     }
 
@@ -31,6 +34,10 @@ class CalcController {
 
         });
 
+    }
+
+    toggleAudio() {
+        this.audioOnOff = !this.audioOnOff;
     }
 
     clearAll() {
@@ -62,6 +69,10 @@ class CalcController {
     }
 
     execBtn(value) {
+        if(this.audioOnOff) {
+            this.audio.currentTime = 0;
+            this.audio.play();
+        }
         switch (value) {
             case 'ce':
                 this.clearEntry();
@@ -88,6 +99,7 @@ class CalcController {
                 this.addDot();
                 break;
             case 'audio':
+                this.toggleAudio();
                 break;
             case 'igual':
                 this.calc();
@@ -104,6 +116,65 @@ class CalcController {
             case '9':
                 this.addOperation(parseInt(value));
         }
+
+    }
+
+    initKeyBoard() {
+
+        document.addEventListener('keydown', e => {
+
+            if(this.audioOnOff) {
+                this.audio.currentTime = 0;
+                this.audio.play();
+            }
+
+            switch (e.key) {
+                case 'Backspace':
+                    this.clearEntry();
+                    break;
+                case 'Escape':
+                    this.clearAll();
+                    break;
+                case '/':
+                    this.addOperation(e.key);
+                    break;
+                case '%':
+                    this.addOperation(e.key);
+                    break;
+                case '*':
+                    this.addOperation(e.key);
+                    break;
+                case '-':
+                    this.addOperation(e.key);
+                    break;
+                case '+':
+                    this.addOperation(e.key);
+                    break;
+                case '.':
+                case ',':
+                    this.addDot();
+                    break;
+                case 'v':
+                    this.toggleAudio();
+                    break;
+                case '=':
+                case 'Enter':
+                    this.calc();
+                    break;
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    this.addOperation(parseInt(e.key));
+            }
+
+        });
 
     }
 

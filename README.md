@@ -8,7 +8,7 @@ Esta calculadora simula a aparência e as principais features da calculadora do 
 
 __*Teclas de ação:*__
 <br>
-<kbd>Enter</kbd> ou <kbd>=</kbd> - obter resultado da operação. Clique mais de uma vez sobre o '=' para repetir a última operação.<br>
+<kbd>Enter</kbd> ou <kbd>=</kbd> - obter resultado da operação. Clique/pressione mais de uma vez sobre o '=' para repetir a última operação.<br>
 <kbd>,</kbd> ou <kbd>.</kbd> - adiciona o ponto para operações decimais.<br>
 <kbd>0</kbd> à <kbd>9</kbd> - adiciona números.<br>
 <kbd>Backspace</kbd> - deleta a última entrada.<br>

@@ -7,19 +7,21 @@ Esta calculadora simula a aparência e as principais features da calculadora do 
 É possível utilizar o teclado para operar a calculadora, veja a lista de teclas:
 
 __*Teclas de ação:*__
-<kbd>Enter</kbd> ou <kbd>=</kbd> - obter resultado da operação. Clique mais de uma vez sobre o '=' para repetir a última operação.
-<kbd>,</kbd> ou <kbd>.</kbd> - adiciona o ponto para operações decimais.
-<kbd>0</kbd> à <kbd>9</kbd> - adiciona números.
-<kbd>Backspace</kbd> - deleta a última entrada.
-<kbd>esc</kbd> - limpa o display.
-<kbd>v</kbd> - liga o som de teclas.
-
+<br>
+<kbd>Enter</kbd> ou <kbd>=</kbd> - obter resultado da operação. Clique mais de uma vez sobre o '=' para repetir a última operação.<br>
+<kbd>,</kbd> ou <kbd>.</kbd> - adiciona o ponto para operações decimais.<br>
+<kbd>0</kbd> à <kbd>9</kbd> - adiciona números.<br>
+<kbd>Backspace</kbd> - deleta a última entrada.<br>
+<kbd>esc</kbd> - limpa o display.<br>
+<kbd>v</kbd> - liga o som de teclas.<br>
+<br>
 __*Operadores:*__
-<kbd>+</kbd> - adição.
-<kbd>-</kbd> - subtração.
-<kbd>%</kbd> - porcento.
-<kbd>*</kbd> - multiplicação
-<kbd>/</kbd> - divisão.
+<br>
+<kbd>+</kbd> - adição.<br>
+<kbd>-</kbd> - subtração.<br>
+<kbd>%</kbd> - porcento.<br>
+<kbd>*</kbd> - multiplicação.<br>
+<kbd>/</kbd> - divisão.<br>
 
 ## Instalando dependências:
 

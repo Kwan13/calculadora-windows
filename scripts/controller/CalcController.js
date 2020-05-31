@@ -17,6 +17,10 @@ class CalcController {
     }
 
     set displayCalc(value) {
+        if (value.toString().length > 10) {
+            this.setError();
+            return false;
+        }
         this._displayCalc.innerHTML = value;
     }
 
@@ -34,6 +38,10 @@ class CalcController {
 
         });
 
+    }
+
+    setError() {
+        this.displayCalc = 'erro';
     }
 
     toggleAudio() {
@@ -69,7 +77,7 @@ class CalcController {
     }
 
     execBtn(value) {
-        if(this.audioOnOff) {
+        if (this.audioOnOff) {
             this.audio.currentTime = 0;
             this.audio.play();
         }
@@ -123,7 +131,7 @@ class CalcController {
 
         document.addEventListener('keydown', e => {
 
-            if(this.audioOnOff) {
+            if (this.audioOnOff) {
                 this.audio.currentTime = 0;
                 this.audio.play();
             }

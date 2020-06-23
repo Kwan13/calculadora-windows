@@ -33,7 +33,7 @@ __*Operadores:*__
 
 2. **_Bower e dependências:_**
 
-	Na raiz do projeto faça:
+	Acesse a raiz do projeto e digite o comando abaixo utilizando um terminal:
 
 	_**Bower:**_ Bower é um utilitário de linha de comando. Instale-o com o npm. [sobre](https://bower.io/).
 
